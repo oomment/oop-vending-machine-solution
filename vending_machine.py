@@ -1,9 +1,13 @@
 """
 A virtual vending machine.
 """
-def insert_coins(coin):
-    """Inserts coins."""
-    raise ValueError
+def insert_coin(coin, inserted_coins):
+    """Inserts coin."""
+    valid_coins = [5, 10, 25, 100, 200]
+    if coin in valid_coins:
+        inserted_coins.append(coin)
+    else:
+        raise ValueError
 
 
 class InsufficientFunds(Exception):
